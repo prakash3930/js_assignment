@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+<!-- html code ______ -->
+
+    <section id="section">
+        <div class="container">
+           <div class="box">
+            <h1>BMI Caculator :</h1><br><br>
+            <label for="weightInput">Width:</label><br><br>
+            <input id="weightInput" type="text" placeholder="Inter Your width"><br><br>
+            <label for="heightInput">height:</label><br><br>
+            <input id="heightInput" type="text" placeholder="Inter Your height"><br><br>
+            <p id="result"></p><br>
+            <button onclick="calculateBtn()">Rerult</button>
+           </div>
+        </div>
+    </section>
+
+
+<!-- javascript code_____ -->
+
+<script>
+    function calculateBtn(){
+
+        var width=document.getElementById('weightInput').value;
+        var height=document.getElementById('heightInput').value;
+        var bmi=width / (height / 100 * height / 100);
+        var total=bmi.toFixed(2);
+        var result=document.getElementById('result').innerHTML='your BMI is ='+total;
+    }
+</script>
+</body>
+</html>
